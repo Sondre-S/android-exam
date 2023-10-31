@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="12dp"
+    android:background="@color/background">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/infoContainer"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="150dp" />
+
+        <TextView
+            android:id="@+id/tvRecipeName"
+            android:layout_width="180dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="50dp"
+            android:fontFamily="sans-serif-light"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Recipe Name" />
+
+
+        <CheckBox
+            android:id="@+id/favorite_icon_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="135dp"
+            android:backgroundTint="@color/white"
+            android:button="@drawable/favorite_checkbox"
+            android:buttonTint="@color/red"
+            android:contentDescription="@string/add_to_favorite_meals"
+            android:labelFor="@id/favorite_icon_btn"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <ImageView
+            android:id="@+id/ivMealType"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_dinner_dining_24"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@+id/tvRecipeName"/>
+
+        <TextView
+            android:id="@+id/tvMealType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/mealtype"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivMealType"
+            app:layout_constraintStart_toEndOf="@+id/ivMealType"
+            app:layout_constraintTop_toTopOf="@+id/ivMealType" />
+
+
+        <ImageView
+            android:id="@+id/ivSource"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_tag_24"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/ivMealType" />
+
+        <TextView
+            android:id="@+id/tvDietLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:text="@string/diet_label"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivSource"
+            app:layout_constraintStart_toEndOf="@+id/ivSource"
+            app:layout_constraintTop_toTopOf="@+id/ivSource" />
+
+        <ImageView
+            android:id="@+id/ivPeople"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_people_24"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/ivSource" />
+
+        <TextView
+            android:id="@+id/tvYield"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivPeople"
+            app:layout_constraintStart_toEndOf="@+id/ivPeople"
+            app:layout_constraintTop_toTopOf="@+id/ivPeople" />
+
+        <ImageView
+            android:id="@+id/ivCalories"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/ic_baseline_calories_leaf_24"
+            app:layout_constraintStart_toStartOf="@+id/guideline2"
+            app:layout_constraintTop_toBottomOf="@id/ivPeople" />
+
+        <TextView
+            android:id="@+id/tvCalories"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:textColor="@color/gray"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/ivCalories"
+            app:layout_constraintStart_toEndOf="@+id/ivCalories"
+            app:layout_constraintTop_toTopOf="@+id/ivCalories" />
+
+        <Button
+            android:id="@+id/select_recipe_btn"
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:text="@string/select"
+            android:textColor="@color/black"
+            app:cornerRadius="4dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:strokeColor="#050606"
+            app:strokeWidth="1.5dp" />
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image_container"
+            android:layout_width="110dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            android:clickable="true"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toTopOf="@+id/select_recipe_btn"
+            app:layout_constraintEnd_toStartOf="@+id/guideline2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_launcher_background" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/ivContainer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="@id/infoContainer"
+        app:layout_constraintStart_toStartOf="@id/infoContainer">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

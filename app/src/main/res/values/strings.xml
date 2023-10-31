@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">Exam Experiment</string>
+    <string name="desired_calories">Desired daily calorie intake:</string>
+    <string name="settings_header">Settings</string>
+    <string name="max_search">Maximum search history:</string>
+    <string name="priority">Priority meal:</string>
+    <string name="diet_type">Desired diet type:</string>
+    <string name="max_amount">Max amount:</string>
+    <string name="save_btn">Save</string>
+    <string name="favorites">Favorites</string>
+    <string name="search_history_header">Search History</string>
+    <string name="mealtype">MealType</string>
+    <string name="diet_label">Diet label</string>
+    <string name="select">Select</string>
+    <string name="selectedBtn">Selected</string>
+    <string name="add_to_favorite_meals">add to favorite meals</string>
+    <string name="home">Home</string>
+</resources>

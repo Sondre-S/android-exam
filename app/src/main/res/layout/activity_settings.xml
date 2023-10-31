@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    tools:context=".ui.SettingsActivity">
+
+    <TextView
+        android:id="@+id/tv_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginStart="40dp"
+        android:fontFamily="@font/poppins"
+        android:text="@string/settings_header"
+        android:textColor="@color/black"
+        android:textSize="35sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="130dp"
+        android:orientation="vertical"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/calorie_choice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/desired_calories"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0436"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:labelFor="@+id/calorie_choice_form"/>
+
+        <EditText
+            android:id="@+id/etDailyCalories"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/my_border"
+            android:inputType="number"
+            android:hint=" Rec.1500-2500"
+            android:autofillHints="desired daily calorie intake"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="200dp"
+        android:orientation="vertical"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/max_search_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/max_search"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/max_search_form"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calorie_choice_form"
+            android:labelFor="@+id/max_search_form"/>
+
+        <Spinner
+            android:id="@+id/sp_max_search"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/my_border"
+            android:entries="@array/max_search_history"
+            app:layout_constraintBottom_toTopOf="@+id/priority_choice_txt"
+            app:layout_constraintEnd_toEndOf="@+id/max_search_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/max_search_txt"
+            android:autofillHints="maximum search history"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="290dp"
+        android:orientation="vertical"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/priority_choice_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/priority"
+            android:textSize="18sp"
+            app:layout_constraintTop_toBottomOf="@+id/max_search_form"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="0dp"
+            android:labelFor="@+id/priority_form"/>
+
+        <Spinner
+            android:id="@+id/sp_priority"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="24dp"
+            android:background="@drawable/my_border"
+            android:entries="@array/priority_meal"
+            app:layout_constraintBottom_toTopOf="@+id/diet_type_txt"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priority_choice_txt"
+            android:autofillHints="priority meal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="380dp"
+        android:orientation="vertical"
+        android:layout_marginRight="40dp">
+
+        <TextView
+            android:id="@+id/diet_type_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="48dp"
+            android:text="@string/diet_type"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/diet_type_form"
+            app:layout_constraintEnd_toStartOf="@+id/max_amount_txt"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/priority_form"
+            android:labelFor="@+id/diet_type_form"/>
+
+        <Spinner
+            android:id="@+id/spDietType"
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="31dp"
+            android:entries="@array/diet_types"
+            android:background="@drawable/my_border"
+            app:layout_constraintBottom_toTopOf="@+id/save_btn"
+            app:layout_constraintEnd_toStartOf="@+id/max_amount_form"
+            app:layout_constraintStart_toStartOf="@+id/calorie_choice_txt"
+            app:layout_constraintTop_toBottomOf="@+id/diet_type_txt"
+            android:autofillHints="desired diet type"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="210dp"
+        android:layout_marginTop="380dp"
+        android:orientation="vertical"
+        android:layout_marginEnd="40dp">
+
+        <TextView
+            android:id="@+id/max_amount_txt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/max_amount"
+            android:textSize="18sp"
+            app:layout_constraintBottom_toTopOf="@+id/max_amount_form"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/diet_type_txt"
+            app:layout_constraintTop_toBottomOf="@+id/priority_form"
+            app:layout_constraintVertical_bias="1.0"
+            android:labelFor="@+id/max_amount_form"/>
+
+        <EditText
+            android:id="@+id/max_amount_form"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:background="@drawable/my_border"
+            android:inputType="numberDecimal"
+            android:hint="  In grams"
+            app:layout_constraintBottom_toTopOf="@+id/save_btn"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/diet_type_form"
+            android:autofillHints="max amount in gram"/>
+
+    </LinearLayout>
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/btmNav"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        app:elevation="2dp"
+        app:itemBackground="@android:color/white"
+        app:itemIconSize="24dp"
+        android:layout_gravity="bottom"
+        app:menu="@menu/menu_btm_navigation" />
+
+    <Button
+        android:id="@+id/save_settings_btn"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:backgroundTint="@color/black"
+        android:text="@string/save_btn"
+        android:textColor="@color/background"
+        android:textSize="16sp"
+        android:clickable="true"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="550dp"
+        android:textStyle="bold"
+        android:focusable="true" />
+
+</FrameLayout>
